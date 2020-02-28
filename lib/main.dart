@@ -7,12 +7,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[200],
-        body: SignUpScreen(),
+        backgroundColor: Colors.grey[0],
+        body: ListView(
+          children: <Widget>[
+            new ListTile(
+              leading: new Icon(Icons.map),
+              title: new Text('Map'),
+            ),
+            new ListTile(
+              leading: new Icon(Icons.photo),
+              title: new Text('Album'),
+            ),
+            new ListTile(
+              leading: new Icon(Icons.phone),
+              title: new Text('Phone'),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
 
 class SignUpScreen extends StatelessWidget {
   @override
